@@ -1,0 +1,85 @@
+@import 'complementos/variaveis';
+
+
+.container-geral {
+  width: 90%;
+  margin: 16px auto;
+  height: auto;
+
+
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 16px 0;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 8px 0;
+  }
+}
+
+.container-home {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .aula-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+      span {
+        font-size: 1.5rem;
+        color: $cor-azul-luz;
+        font-weight: 500;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 8px;
+      text-align: center;
+      color: $cor-cinza-escuro;
+    }
+
+  
+
+  &-content {
+    max-width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    // border: 1px solid $cor-branco;
+    display: flex;
+
+    :nth-child(1) {
+      background-color: $cor-verde-luz;
+      box-shadow: 0 0 16px $cor-verde-luz;
+    }
+
+    :nth-child(2) {
+      background-color: $cor-vermelho-luz;
+      box-shadow: 0 0 16px $cor-vermelho-luz;
+    }
+
+    :nth-child(3) {
+      background-color: $cor-azul-luz;
+      box-shadow: 0 0 16px $cor-azul-luz;
+    }
+
+    .item {
+      width: 240px;
+      height: 90%;
+      margin: 5px;
+      border-radius: 8px;
+    }
+  }
+}
+}
