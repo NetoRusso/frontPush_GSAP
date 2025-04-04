@@ -10,6 +10,7 @@ html {
   height: auto;
   min-height: 100vh;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,20 +24,46 @@ body {
   color: #f2f2f2;
 }
 
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 32px 0;
+}
+
+.top {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 100;
+  height: 32px;
+  width: 32px;
+  font-size: 2rem;
+  color: #777777;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 800;
+  background-color: #f7c8c8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+.top:hover {
+  color: #777777;
+  scale: 0.95;
+  background-color: #e8b4b4;
+}
+
 .container-geral {
   width: 90%;
   margin: 16px auto;
   height: auto;
 }
-.container-geral h1 {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 16px 0;
-}
 .container-geral h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 1rem + 1.1111vw, 2rem);
   font-weight: 600;
   margin: 8px 0;
 }
@@ -48,44 +75,90 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container-home .aula-2 {
+.container-home .indice-estudos {
+  width: 90%;
+  margin: 16px auto;
+  height: auto;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+.container-home .indice-estudos .indice {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+.container-home .indice-estudos .indice a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-size: clamp(1.25rem, 1rem + 1.1111vw, 2rem);
+  font-weight: 600;
+}
+.container-home .indice-estudos .indice a span {
+  font-size: clamp(1rem, 0.8333rem + 0.7407vw, 1.5rem);
+  color: #8db9e7;
+  font-weight: 500;
+}
+.container-home .indice-estudos .indice a:hover {
+  color: #8db9e7;
+}
+
+.container-pratica {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-pratica .aulas {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
-.container-home .aula-2 h2 span {
-  font-size: 1.5rem;
+.container-pratica .aulas h2 span {
+  font-size: clamp(1rem, 0.8333rem + 0.7407vw, 1.5rem);
   color: #8db9e7;
   font-weight: 500;
 }
-.container-home .aula-2 p {
-  font-size: 1rem;
+.container-pratica .aulas p {
+  font-size: clamp(1rem, 0.8333rem + 0.7407vw, 1.5rem);
   margin: 8px;
   text-align: center;
-  color: #777777;
+  color: #cccccc;
 }
-.container-home .aula-2-content {
-  max-width: 1200px;
-  height: 300px;
+.container-pratica .aulas span {
+  font-size: clamp(1rem, 0.8333rem + 0.7407vw, 1.5rem);
+  color: #777777;
+  text-align: center;
+}
+.container-pratica .aulas .aula {
+  width: 90%;
+  min-width: 320px;
+  height: 500px;
   margin: 0 auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.container-home .aula-2-content :nth-child(1) {
+.container-pratica .aulas .aula :nth-child(1) {
   background-color: #a6d5a7;
   box-shadow: 0 0 16px #a6d5a7;
 }
-.container-home .aula-2-content :nth-child(2) {
+.container-pratica .aulas .aula :nth-child(2) {
   background-color: #e8b4b4;
   box-shadow: 0 0 16px #e8b4b4;
 }
-.container-home .aula-2-content :nth-child(3) {
+.container-pratica .aulas .aula :nth-child(3) {
   background-color: #8db9e7;
   box-shadow: 0 0 16px #8db9e7;
 }
-.container-home .aula-2-content .item {
-  width: 240px;
-  height: 90%;
+.container-pratica .aulas .aula .item {
+  width: 20%;
+  height: 60%;
   margin: 5px;
   border-radius: 8px;
 }/*# sourceMappingURL=style.css.map */

@@ -11,22 +11,46 @@
 
 <body>
   <main>
+    <h1 id="titulo">Estudos de GSAP</h1>
     <section class="container-geral container-home">
-      <h1>Estudos de GSAP</h1>
-      <div class="aulas aula-2">
+      <div class="indice-estudos">
+        <h2>Índice de Estudos</h2>
+        <div class="indice">
+          <a href="#gsap-set">2 -GSAP: <span>Método set( )</span></a>
+          <a href="#gsap-to">3 -GSAP: <span>Método to( )</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-geral container-pratica">
+
+      <div class="aulas aulas-2" id="gsap-set">
         <h2>GSAP: <span>Método set( )</span></h2>
-        <p>É um método que seta as configurações iniciais do elemmento.</p>
-        <div class="aula-2-content">
+        <p>É um método que seta as configurações iniciais do elemento.</p>
+        <span>gsap.set(contentAula2, {x: 0, y: 0, skewX:"-30deg",});</span>
+        <div class="aula aula-2">
           <div class="item"></div>
           <div class="item"></div>
           <div class="item"></div>
         </div>
-
+      </div>
+      <div class="aulas aulas-3" id="gsap-to">
+        <h2>GSAP: <span>Método to( )</span></h2>
+        <p>É um método que seta as configurações Finais do elemento.</p>
+        <span>gsap.to(contentAula3, .5, {y: 100, rotateY: 180,});</span>
+        <div class="aula aula-3 ">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
       </div>
     </section>
+    <a class="top" href="#titulo">&and;</a>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+    integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="/js/main.js"></script>
 </body>
 
