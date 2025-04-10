@@ -24,6 +24,8 @@
           <a href="#gsap-loops">07 -GSAP: <span>Loops</span></a>
           <a href="#gsap-funcoes">08 -GSAP: <span>Funções & Callbacks</span></a>
           <a href="#gsap-delay">09 -GSAP: <span>Delay</span></a>
+          <a href="#gsap-timelines">10 -GSAP: <span>Timelines</span></a>
+          <a href="#gsap-timelines2">10.1 -GSAP: <span>Timelines 2</span></a>
         </div>
       </div>
     </section>
@@ -96,7 +98,8 @@
         <h2>GSAP: <span>Método stagger( )</span></h2>
         <p>Método similar ao to(), from() e fromTo(), só que tem manipulação de tempo por delays e é aplicado em
           listas. <br />*'OBS. Descontinuado no v3 porisso utilizar TweenMax'</p>
-        <span class="codigo"> TweenMax.staggerFromTo(listaElementos, 2, { scale: 0, rotate: "0deg", }, { scale: 1, rotate: "360deg" }, 0.2)</span>
+        <span class="codigo"> TweenMax.staggerFromTo(listaElementos, 2, { scale: 0, rotate: "0deg", }, { scale: 1,
+          rotate: "360deg" }, 0.2)</span>
         <div class="btns">
           <button id="btn-anima-6" class="btn-aulas btn-aulas-6">Executar</button>
           <button id="btn-reset-6" class="btn-aulas-reset btn-aulas-6">&olarr;</button>
@@ -111,7 +114,9 @@
       <div class="aulas aulas-7" id="gsap-loops">
         <h2>GSAP: <span>Loops</span></h2>
         <p> Um loop permite que uma animação se repita um número específico de vezes ou indefinidamente.</p>
-        <span class="codigo">gsap.fromTo(elemento,{ rotate: "0deg", y: 0, x: 0, }, { rotate: "360deg", y: 100, x: 100%, duration: 2.5, boxShadow: "0 0 32px", ease: "elastic.inOut(1,0.3)", delay: index * 0.3, yoyo: true, repeat: -1, });</span>
+        <span class="codigo">gsap.fromTo(elemento,{ rotate: "0deg", y: 0, x: 0, }, { rotate: "360deg", y: 100, x: 100%,
+          duration: 2.5, boxShadow: "0 0 32px", ease: "elastic.inOut(1,0.3)", delay: index * 0.3, yoyo: true, repeat:
+          -1, });</span>
         <div class="btns">
           <button id="btn-anima-7" class="btn-aulas btn-aulas-7">Executar</button>
           <button id="btn-reset-7" class="btn-aulas-reset btn-aulas-7">&olarr;</button>
@@ -125,8 +130,11 @@
 
       <div class="aulas aulas-8" id="gsap-funcoes">
         <h2>GSAP: <span>Funções & Callbacks</span></h2>
-        <p>É a capacidade de entrelaçarmos eventos com funções, Calbacks são eventos relacionados a timeline da animação.</p>
-        <span class="codigo">onStart: () => {const itens = Array.from(listaNode).filter((i, idx) => index !== idx); itens.forEach((outroItem) => { gsap.to(outroItem, { scale: 0.8, duration: 0.5, ease: "elastic.inOut(1,0.3)", }) }) },</span>
+        <p>É a capacidade de entrelaçarmos eventos com funções, Calbacks são eventos relacionados a timeline da
+          animação.</p>
+        <span class="codigo">onStart: () => {const itens = Array.from(listaNode).filter((i, idx) => index !== idx);
+          itens.forEach((outroItem) => { gsap.to(outroItem, { scale: 0.8, duration: 0.5, ease: "elastic.inOut(1,0.3)",
+          }) }) },</span>
         <div class="btns">
           <button id="btn-anima-8" class="btn-aulas btn-aulas-8">Executar</button>
           <button id="btn-reset-8" class="btn-aulas-reset btn-aulas-8">&olarr;</button>
@@ -138,11 +146,13 @@
         </div>
       </div>
 
-      
+
       <div class="aulas aulas-9" id="gsap-delay">
         <h2>GSAP: <span>Delay</span></h2>
         <p>Atrasar a execução de uma animação.</p>
-        <span class="codigo"> gsap.fromTo(item, { rotateX: "0deg", rotateY: "0deg", }, { rotateX: `${(index + Math.random()) * 475}deg`, rotateY: `${(index + Math.random()) * 560}deg`,duration: 1, ease: "elastic.inOut(1,0.3)", delay: (index + 1) * Math.random(), });</span>
+        <span class="codigo"> gsap.fromTo(item, { rotateX: "0deg", rotateY: "0deg", }, { rotateX: `${(index +
+          Math.random()) * 475}deg`, rotateY: `${(index + Math.random()) * 560}deg`,duration: 1, ease:
+          "elastic.inOut(1,0.3)", delay: (index + 1) * Math.random(), });</span>
         <div class="btns">
           <button id="btn-anima-9" class="btn-aulas btn-aulas-9">Executar</button>
           <button id="btn-reset-9" class="btn-aulas-reset btn-aulas-9">&olarr;</button>
@@ -152,6 +162,63 @@
           <div class="item"></div>
           <div class="item"></div>
         </div>
+      </div>
+
+
+      <div class="aulas aulas-10" id="gsap-timelines">
+        <h2>GSAP: <span>Timelines</span></h2>
+        <p>Descrição de Timelines no GSAP</p>
+        <span class="codigo">
+          const tl = gsap.timeline();
+          tl.from(item, .5, { x: -500, opacity: 0 })
+          .from(item2, .5, { x: -500, opacity: 0, }, "-=.3")
+          .from(item3, .5, { x: -500, opacity: 0, }, "container");
+          listaItems.forEach((item, index) => {
+          tl.from(item, { rotateX: `-${(index + 1) * Math.random() * 360}deg`,}, `< ${(index + 1) * Math.random() *
+            0.1}`); }); </span>
+            <div class="btns">
+              <button id="btn-anima-10" class="btn-aulas btn-aulas-10">Executar</button>
+              <button id="btn-reset-10" class="btn-aulas-reset btn-aulas-10">&olarr;</button>
+            </div>
+            <div class="aula aula-10 ">
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+            </div>
+      </div>
+
+
+      <div class="aulas aulas-10-2" id="gsap-timelines2">
+        <h2>GSAP: <span>Timelines 2</span></h2>
+        <p>Métodos de controle e TimeScale()</p>
+        <span class="codigo"> 
+          "click", () => { tl.play(); } { tl.pause(); } { tl.resume(); } { tl.reverse(); } { tl.restart(); } { tl.timeSacale('fator').restart(); }
+
+        </span>
+        <!-- <div class="btns">
+          <button id="btn-anima-10-2" class="btn-aulas btn-aulas-10-2">Executar</button>
+          <button id="btn-reset-10-2" class="btn-aulas-reset btn-aulas-10-2">&olarr;</button>
+        </div> -->
+        <div class="aula-10-2-controles">
+          <span class="aula-10-2-controles-acao">
+            <div id="play">.play()</div>
+            <div id="pause">.pause()</div>
+            <div id="resume">.resume()</div>
+            <div id="reverse">.reverse()</div>
+            <div id="restart">.restart()</div>
+          </span>
+          <span class="aula-10-2-controles-velocidade">
+            <div id="rapido">.timeScale(5)</div>
+            <div id="lento">.timeScale(0.1)</div>
+            <div id="normal">.timeScale(1)</div>
+          </span>
+        </div>
+        <div class="aula aula-10-2 ">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+
       </div>
 
     </section>

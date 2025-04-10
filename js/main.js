@@ -285,3 +285,97 @@ reset9.addEventListener("click", () => {
   btn9.disabled = false;
   reset9.disabled = true;
 });
+
+const aula10 = document.querySelector(".aula-10");
+const listaItem10 = document.querySelectorAll(".aula-10 .item");
+const btn10 = document.getElementById("btn-anima-10");
+const reset10 = document.getElementById("btn-reset-10");
+const title = document.querySelector(".aulas-10 h2");
+const paragrafo = document.querySelector(".aulas-10 p");
+
+reset10.disabled = true;
+
+btn10.addEventListener("click", () => {
+
+  const tl = gsap.timeline();
+
+  tl.from(title, .5, { x: -500, opacity: 0 })
+
+  .from(paragrafo, .5, { x: -500, opacity: 0, }, "-=.3")
+  
+  .from(aula10, .5, { x: -500, opacity: 0, }, "container");
+
+
+  listaItem10.forEach((item, index) => {
+    // tl.from(item, { rotateX: "-280deg", delay: (index + 1) * Math.random() * 0.1}, "container-=.02");
+    tl.from(item, { rotateX: `-${(index + 1) * Math.random() * 360}deg`,}, `< ${(index + 1) * Math.random() * 0.1}`);
+  })
+
+});
+
+const aula10_2 = document.querySelectorAll(".aula-10-2");
+const listaItem10_2 = document.querySelectorAll(".aula-10-2 .item");
+const title10_2 = document.querySelector(".aulas-10-2 h2");
+const paragrafo10_2 = document.querySelector(".aulas-10-2 p");
+const play10_2 = document.getElementById("play");
+const pause10_2 = document.getElementById("pause");
+const resume10_2 = document.getElementById("resume");
+const reverse10_2 = document.getElementById("reverse");
+const restart10_2 = document.getElementById("restart");
+const rapido10_2 = document.getElementById("rapido");
+const lento10_2 = document.getElementById("lento");
+const normal10_2 = document.getElementById("normal");
+
+
+
+gsap.set(title10_2, {x: 0, opacity: 1}, paragrafo10_2, {x: 0, opacity: 1}, aula10_2, {x: 0, opacity: 1});
+
+const tl10_2 = gsap.timeline({paused: true});
+
+tl10_2.fromTo(title10_2, .5, { x: 0, opacity: 1 }, { x: -500, opacity: 0 })
+
+.fromTo(paragrafo10_2, .5, { x: 0, opacity: 1 }, { x: -500, opacity: 0, }, "-=.3")
+
+.fromTo(aula10_2, .5, { x: 0, opacity: 1 }, { x: -500, opacity: 0, }, "-=.3");
+
+listaItem10_2.forEach((item, index) => {
+  // tl.from(item, { rotateX: "-280deg", delay: (index + 1) * Math.random() * 0.1}, "container-=.02");
+  tl10_2.fromTo(item, { rotateX: "0deg", }, { rotateX: `-${(index + 1) * Math.random() * 360}deg`,},  `< ${(index + 1) * Math.random() * 0.1}`);
+})
+
+play10_2.addEventListener("click", () => {
+  console.log("Play");
+  tl10_2.timeScale(1).play();
+});
+
+pause10_2.addEventListener("click", () => {
+  console.log("Pause");
+  tl10_2.pause();
+});
+
+resume10_2.addEventListener("click", () => {
+  console.log("Resume");
+  tl10_2.resume();
+});
+
+reverse10_2.addEventListener("click", () => {
+  console.log("Reverse");
+  tl10_2.reverse();
+});
+
+restart10_2.addEventListener("click", () => {
+  console.log("Restart");
+  tl10_2.timeScale(1).restart();
+});
+
+rapido10_2.addEventListener("click", () => {
+  tl10_2.timeScale(5).restart();
+});
+
+lento10_2.addEventListener("click", () => {
+  tl10_2.timeScale(0.1).restart();
+});
+
+normal10_2.addEventListener("click", () => {
+  tl10_2.timeScale(1).restart();
+});

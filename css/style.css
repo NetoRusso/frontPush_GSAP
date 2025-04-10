@@ -232,11 +232,40 @@ h1 {
   scale: 0.95;
   box-shadow: none;
 }
-.container-pratica .aulas-5 {
+.container-pratica .aulas-5,
+.container-pratica .aulas-9,
+.container-pratica .aulas-10,
+.container-pratica .aulas-10-2 {
   perspective: 300px;
   transform-origin: preserve-3d;
 }
-.container-pratica .aulas-9 {
-  perspective: 300px;
-  transform-origin: preserve-3d;
+.container-pratica .aula-10-2-controles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.container-pratica .aula-10-2-controles span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.container-pratica .aula-10-2-controles span div {
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: #cccccc;
+  border-radius: 8px;
+  color: #1a2228;
+  font-weight: 600;
+  box-shadow: -5px 5px 0 #f2f2f2;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.container-pratica .aula-10-2-controles span div:hover {
+  scale: 0.95;
+  background-color: #1a2228;
+  color: #f2f2f2;
+  box-shadow: none;
 }/*# sourceMappingURL=style.css.map */

@@ -130,7 +130,7 @@ h1 {
       text-align: center;
       color: $cor-cinza;
     }
-    
+
     .codigo {
       font-family: 'Courier New', Courier, monospace;
       font-size: 14px;
@@ -153,7 +153,7 @@ h1 {
         background-color: $cor-vermelho-luz;
         box-shadow: 0 0 16px $cor-vermelho-luz;
       }
-      
+
       :nth-child(2) {
         background-color: $cor-verde-luz;
         box-shadow: 0 0 16px $cor-verde-luz;
@@ -173,14 +173,14 @@ h1 {
       }
     }
 
-    .btns { 
+    .btns {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 16px;
       z-index: 20;
 
-      .btn-aulas { 
+      .btn-aulas {
         width: 128px;
         height: 48px;
         margin: 24px auto;
@@ -193,12 +193,14 @@ h1 {
         transition: all 0.3s ease-in-out;
         box-shadow: -5px 5px 0 $cor-branco;
         z-index: 10;
+
         &:hover {
           background-color: $cor-obsidian;
           color: $cor-branco;
           scale: 0.95;
           box-shadow: none;
         }
+
         &:disabled {
           background-color: $cor-cinza;
           color: $cor-cinza-escuro;
@@ -208,7 +210,7 @@ h1 {
         }
       }
 
-      .btn-aulas-reset { 
+      .btn-aulas-reset {
         width: 48px;
         height: 48px;
         border-radius: 50%;
@@ -226,6 +228,7 @@ h1 {
           scale: 0.95;
           box-shadow: none;
         }
+
         &:disabled {
           background-color: $cor-cinza-escuro;
           color: $cor-cinza;
@@ -237,14 +240,50 @@ h1 {
     }
   }
 
-  .aulas-5 {
+  .aulas-5,
+  .aulas-9,
+  .aulas-10,
+  .aulas-10-2 {
     perspective: 300px;
     transform-origin: preserve-3d;
   }
 
-  .aulas-9 {
-    perspective: 300px;
-    transform-origin: preserve-3d;
-  }
 
+  .aula-10-2-controles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    
+  
+    div {
+      font-size: 14px;
+      padding: 8px 16px;
+      background-color: $cor-cinza;
+      border-radius: 8px;
+      color: $cor-obsidian;
+      font-weight: 600;
+      box-shadow: -5px 5px 0 $cor-branco;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+
+      &:hover { 
+        scale: 0.95;
+        background-color: $cor-obsidian;
+        color: $cor-branco;
+        box-shadow: none;
+      }
+    }
+  }
+  }
 }
+
