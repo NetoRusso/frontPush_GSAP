@@ -16,7 +16,6 @@ html {
 body {
   width: 100%;
   height: auto;
-  min-height: 100vh;
   background-color: #1a1a1a;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -57,8 +56,8 @@ h1 {
 }
 
 .container-geral {
-  width: 90%;
-  margin: 16px auto;
+  width: 100%;
+  margin: 16px 0;
   height: auto;
 }
 .container-geral h2 {
@@ -115,8 +114,8 @@ h1 {
 }
 .container-pratica .aulas {
   width: 90%;
-  min-width: 320px;
   margin: 16px auto;
+  min-width: 320px;
   height: auto;
   min-height: 500px;
   display: flex;
@@ -232,6 +231,22 @@ h1 {
   scale: 0.95;
   box-shadow: none;
 }
+.container-pratica .aulas-scrollTrigger {
+  width: 100%;
+  height: auto;
+}
+.container-pratica .aulas-scrollTrigger-container {
+  width: 100vw;
+  height: 100vh;
+  align-self: center;
+  margin: 0 auto;
+}
+.container-pratica .aulas-scrollTrigger-container-elemento {
+  width: 100px;
+  height: 100px;
+  background-color: #cccccc;
+  display: block;
+}
 .container-pratica .aulas-5,
 .container-pratica .aulas-9,
 .container-pratica .aulas-10,
@@ -245,6 +260,7 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 16px;
+  margin: 16px 0;
 }
 .container-pratica .aula-10-2-controles span {
   display: flex;
@@ -268,4 +284,19 @@ h1 {
   background-color: #1a2228;
   color: #f2f2f2;
   box-shadow: none;
+}
+.container-pratica .aulas-11 .elemento-1 {
+  transform: translateY(200px);
+  border-radius: 50%;
+}
+.container-pratica .aulas-11 .elemento-2 {
+  background-color: #777777;
+  transform: translateY(500px);
+}
+.container-pratica .aulas-12 .elemento-1 {
+  transform: translate(100px, 100px);
+  border-radius: 50%;
+}
+.container-pratica .aulas-12 .blue {
+  background: linear-gradient(to bottom, #8db9e7, #a6d5a7);
 }/*# sourceMappingURL=style.css.map */

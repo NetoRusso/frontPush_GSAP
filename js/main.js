@@ -379,3 +379,38 @@ lento10_2.addEventListener("click", () => {
 normal10_2.addEventListener("click", () => {
   tl10_2.timeScale(1).restart();
 });
+
+
+const aula11 = document.querySelector(".aulas-11");
+const Container11_1 = document.querySelector(".aulas-11-container-1");
+const elemento11_1 = document.querySelector(".aulas-11 .elemento-1");
+const elemento11_2 = document.querySelector(".aulas-11 .elemento-2");
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to( elemento11_1, {
+  x: 500,
+  duration: 3,
+  scrollTrigger: elemento11_2, 
+}); 
+
+
+const aula12 = document.querySelector(".aulas-12");
+const container12_1 = document.querySelector(".aulas-12-container");
+const elemento12_1 = container12_1.querySelector(".elemento-1");
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to( elemento12_1, {
+  x: '80vw',
+  rotate: "3600deg",
+  duration: 3,
+  scrollTrigger: {
+    trigger: elemento12_1,
+    start: "top 90%",
+    end: "bottom 10%",
+    toggleClass: 'blue',
+    scrub: true,
+  }, 
+});

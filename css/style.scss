@@ -35,8 +35,8 @@ h1 {
 }
 
 .container-geral {
-  width: 90%;
-  margin: 16px auto;
+  width: 100%;
+  margin: 16px 0;
   height: auto;
 
 
@@ -94,6 +94,7 @@ h1 {
 }
 
 .container-pratica {
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -103,8 +104,8 @@ h1 {
 
   .aulas {
     width: 90%;
-    min-width: 320px;
     margin: 16px auto;
+    min-width: 320px;
     height: auto;
     min-height: 500px;
     display: flex;
@@ -240,6 +241,27 @@ h1 {
     }
   }
 
+  .aulas-scrollTrigger {
+    width: 100%;
+    height: auto;
+
+    &-container {
+      width: 100vw;
+      height: 100vh;
+      // background-color: #0c0c0c;
+      align-self: center;
+      margin: 0 auto;
+      // border: 1px solid $cor-cinza;
+
+      &-elemento {
+        width: 100px;
+        height: 100px;
+        background-color: $cor-cinza;
+        display: block;
+      }
+    }
+  }
+
   .aulas-5,
   .aulas-9,
   .aulas-10,
@@ -255,35 +277,60 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 16px;
+    margin: 16px 0;
 
-    
+
     span {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 16px;
-    
-  
-    div {
-      font-size: 14px;
-      padding: 8px 16px;
-      background-color: $cor-cinza;
-      border-radius: 8px;
-      color: $cor-obsidian;
-      font-weight: 600;
-      box-shadow: -5px 5px 0 $cor-branco;
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
 
 
-      &:hover { 
-        scale: 0.95;
-        background-color: $cor-obsidian;
-        color: $cor-branco;
-        box-shadow: none;
+      div {
+        font-size: 14px;
+        padding: 8px 16px;
+        background-color: $cor-cinza;
+        border-radius: 8px;
+        color: $cor-obsidian;
+        font-weight: 600;
+        box-shadow: -5px 5px 0 $cor-branco;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+
+        &:hover {
+          scale: 0.95;
+          background-color: $cor-obsidian;
+          color: $cor-branco;
+          box-shadow: none;
+        }
       }
     }
   }
-  }
-}
 
+  .aulas-11 {
+    // height: 500px;
+    .elemento-1 {
+      transform: translateY(200px);
+      border-radius: 50%;
+    }
+
+    .elemento-2 {
+      background-color: $cor-cinza-escuro;
+      transform: translateY(500px);
+    }
+  }
+
+  .aulas-12 {
+    // height: auto;
+    .elemento-1 {
+      transform: translate(100px,100px);
+      border-radius: 50%;
+    }
+    .blue {
+      background: linear-gradient(to bottom, $cor-azul-luz, $cor-verde-luz);
+    }
+  }
+
+}
