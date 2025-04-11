@@ -27,7 +27,10 @@
           <a href="#gsap-timelines">10 -GSAP: <span>Timelines</span></a>
           <a href="#gsap-timelines2">10.1 -GSAP: <span>Timelines 2</span></a>
           <a href="#gsap-scrollTrigger">11 -GSAP: <span>ScrollTrigger</span></a>
-          <a href="#gsap-scrollTriggerStartEnd">11 -GSAP: <span>ScrollTrigger - Start & End</span></a>
+          <a href="#gsap-scrollTriggerStartEnd">12 -GSAP: <span>ScrollTrigger - Start & End</span></a>
+          <a href="#gsap-scrollTriggerToggleActions">13 -GSAP: <span>ScrollTrigger - Toggle Actions</span></a>
+          <a href="#gsap-scrollTriggerScrub">14 -GSAP: <span>ScrollTrigger - Scrub</span></a>
+          <a href="#gsap-scrollTriggerPin">15 -GSAP: <span>ScrollTrigger - Pin</span></a>
         </div>
       </div>
     </section>
@@ -224,26 +227,68 @@
       <div class="aulas  aulas-scrollTrigger aulas-11" id="gsap-scrollTrigger">
         <h2>GSAP: <span>ScrollTrigger</span></h2>
         <p>Descrição de ScrollTrigger no GSAP</p>
-        <span class="codigo">gsap.registerPlugin(ScrollTrigger);<br/>
+        <span class="codigo">gsap.registerPlugin(ScrollTrigger);<br />
           gsap.to( elemento1, { x: 500, duration: 3, scrollTrigger: elemento2, }); </span>
 
-      <div class="aulas-scrollTrigger-container  aulas-11-container container-1">
-        <div class="aulas-scrollTrigger-container-elemento  elemento-1"></div>
-        <div class="aulas-scrollTrigger-container-elemento  elemento-2"></div>
-      </div>
+        <div class="aulas-scrollTrigger-container  aulas-11-container container-1">
+          <div class="aulas-scrollTrigger-container-elemento  elemento-1"></div>
+          <div class="aulas-scrollTrigger-container-elemento  elemento-2"></div>
+        </div>
 
       </div>
 
       <div class="aulas  aulas-scrollTrigger aulas-12" id="gsap-scrollTriggerStartEnd">
         <h2>GSAP: <span>ScrollTrigger Start & End</span></h2>
-        <p>Descrição de ScrollTrigger no GSAP</p>
-        <span class="codigo">gsap.to( elemento, { x: '80vw', rotate: "3600deg", duration: 3, scrollTrigger: { trigger: elemento, start: "top 90%", end: "bottom 10%", toggleClass: 'class', scrub: true, //markers: true, },}); </span>
+        <p>Pontos de Start e End da animação em ScrollTrigger</p>
+        <span class="codigo">gsap.to( elemento, { x: '80vw', rotate: "3600deg", duration: 3, scrollTrigger: { trigger:
+          elemento, start: "top 90%", end: "bottom 10%", toggleClass: 'class', //markers: true, },}); </span>
 
-      <div class="aulas-scrollTrigger-container  aulas-12-container container-1">
-        <div class="aulas-scrollTrigger-container-elemento  elemento-1"></div>
+        <div class="aulas-scrollTrigger-container  aulas-12-container container-1">
+          <div class="aulas-scrollTrigger-container-elemento  elemento-1"></div>
+        </div>
+
       </div>
 
+      <div class="aulas  aulas-scrollTrigger aulas-13" id="gsap-scrollTriggerToggleActions">
+        <h2>GSAP: <span>ScrollTrigger Toggle Actions</span></h2>
+        <p>Ativa/desativa animação no scroll.</p>
+        <span class="codigo">gsap.to( elemento, {x: '80vw', rotate: "3600deg", duration: 10, scrollTrigger: { trigger:
+          elemento, start: "top 20%", end: "bottom 10%", toggleActions: 'play pause resume reverse', // onEnter,
+          onLeave, onEnterBack, onLeaveBack / play pause resume restart reset complete },});</span>
+
+        <div class="aulas-scrollTrigger-container  aulas-13-container container-1">
+          <div class="aulas-scrollTrigger-container-elemento  elemento-1"></div>
+        </div>
+
       </div>
+
+      <div class="aulas  aulas-scrollTrigger aulas-14" id="gsap-scrollTriggerScrub">
+        <h2>GSAP: <span>ScrollTrigger Scrub</span></h2>
+        <p>Animação controlada diretamente pelo movimento do scroll.</p>
+        <span class="codigo">gsap.to( elemento, { x: '80vw', rotate: "36000deg", scrollTrigger: { trigger: elemento, start: "top 90%", end: "bottom 10%", //markers: true, },}); </span>
+
+        <div class="aulas-scrollTrigger-container  aulas-14-container container-1">
+          <div class="aulas-scrollTrigger-container-elemento  elemento-1"></div>
+        </div>
+
+      </div>
+
+
+      <div class="aulas  aulas-scrollTrigger aulas-15" id="gsap-scrollTriggerPin">
+        <h2>GSAP: <span>ScrollTrigger Pin</span></h2>
+        <p>Fixa um elemento durante o scroll.</p>
+        <span class="codigo">
+          gsap.to( elemento15_1, { rotate: "36000deg", scrollTrigger: { trigger: elemento15_2, start: "top 50%", end: "bottom 10%", scrub: true, pin: elemento15_1, }, });  
+        </span>
+
+        <div class="aulas-scrollTrigger-container  aulas-15-container container-1">
+          <div class="aulas-scrollTrigger-container-elemento  elemento-1"></div>
+          <div class="aulas-scrollTrigger-container-elemento  elemento-2"></div>
+        </div>
+
+      </div>
+
+
     </section>
     <a class="top" href="#titulo">&and;</a>
   </main>
@@ -251,7 +296,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
     integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"> </script>
   <script src="/js/main.js"></script>
 </body>
 

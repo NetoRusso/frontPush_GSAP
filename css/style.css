@@ -137,6 +137,7 @@ h1 {
   color: #cccccc;
 }
 .container-pratica .aulas .codigo {
+  width: 100%;
   font-family: "Courier New", Courier, monospace;
   font-size: 14px;
   color: #37cc19;
@@ -290,6 +291,7 @@ h1 {
   box-shadow: none;
 }
 .container-pratica .aulas-11 .elemento-1 {
+  background: linear-gradient(to bottom, #8db9e7 30%, #0c2847);
   transform: translateY(200px);
   border-radius: 50%;
 }
@@ -302,5 +304,23 @@ h1 {
   border-radius: 50%;
 }
 .container-pratica .aulas-12 .blue {
-  background: linear-gradient(to bottom, #8db9e7, #a6d5a7);
+  background: linear-gradient(to bottom, #8db9e7 30%, #0c2847);
+}
+.container-pratica .aulas-13,
+.container-pratica .aulas-14,
+.container-pratica .aulas-15 {
+  display: block;
+}
+.container-pratica .aulas-13 .elemento-1,
+.container-pratica .aulas-14 .elemento-1,
+.container-pratica .aulas-15 .elemento-1 {
+  background: linear-gradient(to bottom, #8db9e7 30%, #0c2847);
+  transform: translate(100px, 100px);
+  border-radius: 50%;
+}
+.container-pratica .aulas-13 .elemento-2,
+.container-pratica .aulas-14 .elemento-2,
+.container-pratica .aulas-15 .elemento-2 {
+  background-color: #777777;
+  transform: translate(100px, 100px);
 }/*# sourceMappingURL=style.css.map */

@@ -133,6 +133,7 @@ h1 {
     }
 
     .codigo {
+      width: 100%;
       font-family: 'Courier New', Courier, monospace;
       font-size: 14px;
       color: $cor-verde-codigo;
@@ -316,6 +317,7 @@ h1 {
   .aulas-11 {
     // height: 500px;
     .elemento-1 {
+      background: linear-gradient(to bottom, $cor-azul-luz 30%, $cor-azul-sombra);
       transform: translateY(200px);
       border-radius: 50%;
     }
@@ -333,8 +335,29 @@ h1 {
       border-radius: 50%;
     }
     .blue {
-      background: linear-gradient(to bottom, $cor-azul-luz, $cor-verde-luz);
+      background: linear-gradient(to bottom, $cor-azul-luz 30%, $cor-azul-sombra);
     }
   }
+  
+  .aulas-13,
+  .aulas-14,
+  .aulas-15 {
+    display: block;
+
+    .elemento-1 {
+      background: linear-gradient(to bottom, $cor-azul-luz 30%, $cor-azul-sombra);
+      transform: translate(100px,100px);
+      border-radius: 50%;
+    }
+
+    .elemento-2 {
+      background-color: $cor-cinza-escuro;
+      transform: translate(100px,100px);
+    }
+  }
+
+
+
+
 
 }

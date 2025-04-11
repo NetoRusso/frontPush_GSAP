@@ -390,27 +390,85 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.to( elemento11_1, {
   x: 500,
-  duration: 3,
+  duration: 10,
   scrollTrigger: elemento11_2, 
 }); 
 
 
 const aula12 = document.querySelector(".aulas-12");
-const container12_1 = document.querySelector(".aulas-12-container");
-const elemento12_1 = container12_1.querySelector(".elemento-1");
+const container12 = document.querySelector(".aulas-12-container");
+const elemento12 = container12.querySelector(".elemento-1");
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to( elemento12_1, {
+gsap.to( elemento12, {
   x: '80vw',
   rotate: "3600deg",
-  duration: 3,
+  duration: 10,
   scrollTrigger: {
-    trigger: elemento12_1,
+    trigger: elemento12,
     start: "top 90%",
     end: "bottom 10%",
     toggleClass: 'blue',
+    // scrub: true,
+  }, 
+});
+
+
+const aula13 = document.querySelector(".aulas-13");
+const container13 = document.querySelector(".aulas-13-container");
+const elemento13 = container13.querySelector(".elemento-1");
+
+gsap.to( elemento13, {
+  x: '80vw',
+  rotate: "3600deg",
+  duration: 10,
+  scrollTrigger: {
+    trigger: elemento13,
+    start: "top 20%",
+    end: "bottom 10%",
+    // scrub: true,
+    toggleActions: 'play pause resume reverse', // onEnter, onLeave, onEnterBack, onLeaveBack / play pause resume restart reset complete 
+
+    // markers: true,
+  }, 
+});
+
+const aula14 = document.querySelector(".aulas-14");
+const container14 = document.querySelector(".aulas-14-container");
+const elemento14 = container14.querySelector(".elemento-1");
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to( elemento14, {
+  x: '80vw',
+  rotate: "36000deg",
+  scrollTrigger: {
+    trigger: elemento14,
+    start: "top 90%",
+    end: "bottom 10%",
     scrub: true,
+
+    // markers: true,
+  }, 
+});
+
+
+const aula15 = document.querySelector(".aulas-15");
+const container15 = document.querySelector(".aulas-15-container");
+const elemento15_1 = container15.querySelector(".elemento-1");
+const elemento15_2 = container15.querySelector(".elemento-2");
+
+
+gsap.to( elemento15_1, {
+  rotate: "36000deg",
+  scrollTrigger: {
+    trigger: elemento15_2,
+    start: "top 50%",
+    end: "bottom 10%",
+    scrub: true,
+    pin: elemento15_1,
   }, 
 });
